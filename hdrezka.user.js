@@ -6,6 +6,7 @@
 // @author       ANT0x1
 // @match        http://*.cdnapponline.com/video/*
 // @grant        none
+// @encoding     utf-8
 // ==/UserScript==
 
 (function() {
