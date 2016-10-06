@@ -5,8 +5,8 @@
 // @description  Disables all ads on this site.
 // @author       ANT0x1
 // @match        http://*.cdnapponline.com/video/*
-// @updateURL   https://github.com/ANT0x1/Scripts/raw/master/hdrezka.user.js
-//dounloadURL   https://github.com/ANT0x1/Scripts/raw/master/hdrezka.user.js
+// @updateURL    https://openuserjs.org/meta/ANT0x1/HDRezka_Ads_Disabler.meta.js
+// @downloadURL  https://github.com/ANT0x1/Scripts/raw/master/hdrezka.user.js
 // @grant        none
 // @encoding     utf-8
 // @copyright 2016, ANT0x1
