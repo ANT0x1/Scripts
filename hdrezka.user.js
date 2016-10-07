@@ -1,12 +1,16 @@
 // ==UserScript==
-// @name         HDRezka Ads Disabler
+// @name         HDRezka Player Ads Disabler
 // @namespace    ANT0x1
-// @version      1.1
-// @description  Disables all ads on hdrezka.me site.
+// @version      1.2.2
+// @date         2016-10-07
+// @description  Disables all ads in player on site HDRezka.
 // @author       ANT0x1
-// @match        http://*.cdnapponline.com/video/*
-// @updateURL    https://openuserjs.org/meta/ANT0x1/HDRezka_Ads_Disabler.meta.js
-// @downloadURL  https://github.com/ANT0x1/Scripts/raw/master/hdrezka.user.js
+// @include      http://*.cdnapponline.com/*
+// @updateURL    https://openuserjs.org/meta/ANT0x1/HDRezka_Player_Ads_Disabler.meta.js
+// @downloadURL  https://openuserjs.org/install/ANT0x1/HDRezka_Player_Ads_Disabler.user.js
+// @icon         http://hdrezka.me/templates/hdrezka/images/favicon.ico
+// @run-at       document-end
+// @homepage     https://openuserjs.org/scripts/ANT0x1/
 // @grant        none
 // @copyright 2016, ANT0x1
 // ==/UserScript==
