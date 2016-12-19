@@ -1,16 +1,18 @@
 // ==UserScript==
-// @name          Разблокировщик талантов на boi.pw
-// @namespace     ANT0x1
-// @version       1.2
-// @description   Удаляет рекламу и разблокирует таланты на boi.pw
-// @author        ANT0x1
-// @include       http://boi.pw/calculator/*
-// @include       https://boi.pw/calculator/*
-// @updateURL     https://openuserjs.org/meta/ANT0x1/Talent_unlocker_for_boi.pw.meta.js
-// @homepage      https://openuserjs.org/scripts/ANT0x1/
-// @icon          https://boi.pw/calculator/images/favicon.ico
-// @grant         none
-// @copyright     2016, ANT0x1
+// @name            Talent unlocker for boi.pw
+// @name:ru         Разблокировщик талантов на boi.pw
+// @namespace       ANT0x1
+// @version         1.3
+// @description     Removes ads, unlocks the talents and hides the chat on boi.pw
+// @description:ru  Удаляет рекламу и разблокирует таланты на boi.pw
+// @author          ANT0x1
+// @include         http://boi.pw/calculator/*
+// @include         https://boi.pw/calculator/*
+// @updateURL       https://openuserjs.org/meta/ANT0x1/Talent_unlocker_for_boi.pw.meta.js
+// @homepage        https://openuserjs.org/scripts/ANT0x1/
+// @icon            https://boi.pw/calculator/images/favicon.ico
+// @grant           none
+// @copyright       2016, ANT0x1
 // ==/UserScript==
 'use strict';
 
