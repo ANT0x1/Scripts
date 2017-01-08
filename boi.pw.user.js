@@ -2,11 +2,11 @@
 // @name            Talent unlocker for boi.pw
 // @name:ru         Разблокировщик талантов на boi.pw
 // @namespace       ANT0x1
-// @version         1.3.2
+// @version         1.3.3
 // @description     Removes ads, unlocks the talents and hides the chat on boi.pw
 // @description:ru  Удаляет рекламу и разблокирует таланты на boi.pw
 // @author          ANT0x1
-// @match           https://boi.pw/calculator/my_bild.php?*
+// @match           https://boi.pw/calculator/my_bild.php*
 // @updateURL       https://openuserjs.org/meta/ANT0x1/Talent_unlocker_for_boi.pw.meta.js
 // @homepage        https://openuserjs.org/scripts/ANT0x1/
 // @icon            https://boi.pw/calculator/images/favicon.ico
