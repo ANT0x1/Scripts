@@ -11,7 +11,7 @@
 // @match          https://play.google.com/store?code*
 // @grant          none
 // @homepage       https://openuserjs.org/scripts/ANT0x1/
-// @updateURL https://openuserjs.org/meta/ANT0x1/Google_Play_Code_Redeemer.meta.js
+// @updateURL      https://openuserjs.org/meta/ANT0x1/Google_Play_Code_Redeemer.meta.js
 // @copyright      2017, ANT0x1
 // ==/UserScript==
 
