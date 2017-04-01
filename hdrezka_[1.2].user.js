@@ -2,7 +2,7 @@
 // @name            HDRezka Player Ads Disabler [1/2]
 // @name:en         HDRezka Player Ads Disabler [1/2]
 // @namespace       ANT0x1
-// @version         1.3.0
+// @version         1.3.1
 // @date            2017-04-01
 // @description     Отключает рекламу в плеере на HDRezka.
 // @description:en  Disables all ads in player on site HDRezka.
@@ -20,5 +20,6 @@
 (function() {
     'use strict';
     adv_enabled = false;
+    showVideo();
     console.log("Ads disabled [1/2].");
 })();
