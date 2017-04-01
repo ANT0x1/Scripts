@@ -21,5 +21,6 @@
 (function() {
     'use strict';
     links.vast = null;
+    links.default = 1080;
     console.log("Ads disabled [2/2].");
 })();
