@@ -9,3 +9,5 @@
 ! ----- Cosmetic Rules ----- !
 ! VK Wall Ads
 vk.com## ._post_content:has(.wall_marked_as_ads)
+! Foreign Policy Paywall Hide
+foreignpolicy.com###paywall_bg
