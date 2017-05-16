@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: AdBlock Filters
 ! Author: ANT0x1 | https://github.com/ANT0x1
-! Version: 1.0
+! Version: 1.0.1
 ! Expires: 1 days
 ! Homepage: https://github.com/ANT0x1/Scripts
 ! WritingRules: https://adblockplus.org/filters
