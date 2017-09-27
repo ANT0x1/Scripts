@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: AdBlock Filters
 ! Author: ANT0x1 | https://github.com/ANT0x1
-! Version: 1.0.2
+! Version: 1.0.3
 ! Expires: 1 days
 ! Homepage: https://github.com/ANT0x1/Scripts
 ! WritingRules: https://adblockplus.org/filters
@@ -9,7 +9,16 @@
 ! ----- Cosmetic Rules ----- !
 ! VK Wall Ads
 vk.com## ._post_content:has(.wall_marked_as_ads)
+
 ! Foreign Policy Paywall Hide
 foreignpolicy.com###paywall_bg
+
 ! 31.08.2017, 2:18:23 Trakt.TV
+trakt.tv## a[href="/vip"]
 trakt.tv###huckster-desktop-wrapper
+trakt.tv###huckster-desktop-sidenav
+trakt.tv##.col-sm-6.col-md-4.col-xlg-3.huckster-grid-item.grid-item
+trakt.tv##.watch-now
+trakt.tv##.get-tickets
+trakt.tv##.btn-watch-now
+trakt.tv##.btn-get-tickets
