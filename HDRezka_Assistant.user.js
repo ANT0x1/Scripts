@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name            HDRezka Assistant
-// @name:en         HDRezka Assistant
+// @name            MoonWalk Assistant
+// @name:en         MoonWalk Assistant
 // @namespace       ANT0x1
 // @version         2.0.2
 // @date            2018-08-08
-// @description     Расширяет функционал плеера HDRezka.
-// @description:en  Extends player functionality on HDRezka.
+// @description     Расширяет функционал плеера MoonWalk.
+// @description:en  Extends Moonwalk player functionality.
 // @author          ANT0x1
 // @match           http://*.abbanole.com/*/iframe*
 // @icon            http://hdrezka.me/templates/hdrezka/images/favicon.ico
