@@ -20,7 +20,7 @@
 // ==/UserScript==
 
 (function() {
-    'use strict'
+    'use strict';
     removeAds();
 })();
 
