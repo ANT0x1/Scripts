@@ -2,7 +2,7 @@
 // @name            HDRezka Assistant
 // @name:en         HDRezka Assistant
 // @namespace       ANT0x1
-// @version         2.0.0
+// @version         2.0.1
 // @date            2018-08-08
 // @description     Расширяет функционал плеера HDRezka.
 // @description:en  Extends player functionality on HDRezka.
@@ -17,7 +17,12 @@
 // @copyright       2018, ANT0x1
 // @license         CC-BY-NC-SA-4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 // @license         GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
+// @namespace       ANT0x1
 // ==/UserScript==
+
+// ==OpenUserJS==
+// @author          ANT0x1
+// ==/OpenUserJS==
 
 (function() {
     'use strict';
