@@ -2,7 +2,7 @@
 // @name            MoonWalk Assistant
 // @name:en         MoonWalk Assistant
 // @namespace       ANT0x1
-// @version         2.0.2
+// @version         2.1.2
 // @date            2018-08-08
 // @description     Расширяет функционал плеера MoonWalk.
 // @description:en  Extends Moonwalk player functionality.
