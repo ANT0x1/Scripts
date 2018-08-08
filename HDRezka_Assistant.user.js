@@ -15,7 +15,7 @@
 // @homepage        https://openuserjs.org/scripts/ANT0x1/
 // @grant           none
 // @copyright       2018, ANT0x1
-// @license	    CC-BY-NC-SA-4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+// @license         CC-BY-NC-SA-4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 // @license         GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
 
@@ -41,7 +41,7 @@ function removeAds(){
             }
             else{
                 player.vast.remove();
-                console.log("[Assistant] Ads disabled.");
+                console.debug("[Assistant] Ads disabled.");
                 playVideo();
             }
         }
@@ -57,12 +57,12 @@ function playVideo(){
 		
 		player.api.play();
 		
-		console.log("[Assistant] Playing.");
+		console.debug("[Assistant] Playing.");
 		
 		restoreFromStorage(); 
 
 		api.fullscreen();
-		console.log("[Assistant] Set to fullscreen.");
+		console.debug("[Assistant] Set to fullscreen.");
 
 		player.api.setVolume(currentVideo.volume);		
 		
@@ -96,7 +96,7 @@ function restorePosition(){
 	
 	if (currentVideo.position > 0){
 		player.api.seek(currentVideo.position);
-		console.log("[Assistant] Position restored to "+currentVideo.position+' sec.');
+		console.debug("[Assistant] Position restored to "+currentVideo.position+' sec.');
 	}
 }
 
@@ -109,7 +109,7 @@ function saveToStorage(){
 	videos[video_balancer.options.video_token] = currentVideo;
 	localStorage.setItem('videos', JSON.stringify(videos));
 	
-	console.log('[Assistant] Saved to storage');
+	console.debug('[Assistant] Saved to storage');
 }
 
 function restoreFromStorage(){
@@ -130,7 +130,7 @@ function restoreFromStorage(){
 		}
 	}
 	
-	console.log('[Assistant] Restored from storage');
+	console.debug('[Assistant] Restored from storage');
 	
 	if (!currentVideo.isFinished)
 		restorePosition();
