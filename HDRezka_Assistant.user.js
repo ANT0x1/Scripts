@@ -2,7 +2,7 @@
 // @name            HDRezka Assistant
 // @name:en         HDRezka Assistant
 // @namespace       ANT0x1
-// @version         2.0.1
+// @version         2.0.2
 // @date            2018-08-08
 // @description     Расширяет функционал плеера HDRezka.
 // @description:en  Extends player functionality on HDRezka.
@@ -46,7 +46,7 @@ function removeAds(){
             }
             else{
                 player.vast.remove();
-                console.debug("[Assistant] Ads disabled.");
+                console.log("[Assistant] Ads disabled.");
                 playVideo();
             }
         }
@@ -62,12 +62,12 @@ function playVideo(){
 		
 		player.api.play();
 		
-		console.debug("[Assistant] Playing.");
+		console.log("[Assistant] Playing.");
 		
 		restoreFromStorage(); 
 
 		api.fullscreen();
-		console.debug("[Assistant] Set to fullscreen.");
+		console.log("[Assistant] Set to fullscreen.");
 
 		player.api.setVolume(currentVideo.volume);		
 		
@@ -101,7 +101,7 @@ function restorePosition(){
 	
 	if (currentVideo.position > 0){
 		player.api.seek(currentVideo.position);
-		console.debug("[Assistant] Position restored to "+currentVideo.position+' sec.');
+		console.log("[Assistant] Position restored to "+currentVideo.position+' sec.');
 	}
 }
 
@@ -114,7 +114,7 @@ function saveToStorage(){
 	videos[video_balancer.options.video_token] = currentVideo;
 	localStorage.setItem('videos', JSON.stringify(videos));
 	
-	console.debug('[Assistant] Saved to storage');
+	console.log('[Assistant] Saved to storage');
 }
 
 function restoreFromStorage(){
@@ -135,7 +135,7 @@ function restoreFromStorage(){
 		}
 	}
 	
-	console.debug('[Assistant] Restored from storage');
+	console.log('[Assistant] Restored from storage');
 	
 	if (!currentVideo.isFinished)
 		restorePosition();
