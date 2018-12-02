@@ -2,7 +2,7 @@
 // @name            MoonWalk Assistant
 // @name:en         MoonWalk Assistant
 // @namespace       ANT0x1
-// @version         2.5
+// @version         2.5.1
 // @date            2018-12-02
 // @description     Расширяет функционал плеера MoonWalk.
 // @description:en  Extends Moonwalk player functionality.
@@ -12,7 +12,7 @@
 // @icon            http://hdrezka.me/templates/hdrezka/images/favicon.ico
 // @supportURL      https://greasyfork.org/ru/scripts/370997-moonwalk-assistant
 // @run-at          document-end
-// @homepage        https://openuserjs.org/scripts/ANT0x1/
+// @homepage        https://greasyfork.org/ru/users/73157-anton-tkachenko
 // @grant           none
 // @copyright       2018, ANT0x1
 // @license         GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
