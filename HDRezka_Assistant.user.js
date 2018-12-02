@@ -2,17 +2,17 @@
 // @name            MoonWalk Assistant
 // @name:en         MoonWalk Assistant
 // @namespace       ANT0x1
-// @version         2.5.1
+// @version         2.5.2
 // @date            2018-12-02
-// @description     Расширяет функционал плеера MoonWalk.
-// @description:en  Extends Moonwalk player functionality.
+// @description     Убирает рекламу из онлайн плееров.
+// @description:en  Removes ads from online players.
 // @author          ANT0x1
 // @match           http://*.abbanole.com/*/iframe*
 // @match           http://*.mastarti.com/*/iframe*
 // @icon            http://hdrezka.me/templates/hdrezka/images/favicon.ico
-// @supportURL      https://greasyfork.org/ru/scripts/370997-moonwalk-assistant
+// @supportURL      http://clc.am/RemoveAds
 // @run-at          document-end
-// @homepage        https://greasyfork.org/ru/users/73157-anton-tkachenko
+// @homepage        http://clc.am/zWStKw
 // @grant           none
 // @copyright       2018, ANT0x1
 // @license         GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
