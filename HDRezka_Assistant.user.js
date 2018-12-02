@@ -2,20 +2,19 @@
 // @name            MoonWalk Assistant
 // @name:en         MoonWalk Assistant
 // @namespace       ANT0x1
-// @version         2.1.2
-// @date            2018-08-08
+// @version         2.5
+// @date            2018-12-02
 // @description     Расширяет функционал плеера MoonWalk.
 // @description:en  Extends Moonwalk player functionality.
 // @author          ANT0x1
 // @match           http://*.abbanole.com/*/iframe*
+// @match           http://*.mastarti.com/*/iframe*
 // @icon            http://hdrezka.me/templates/hdrezka/images/favicon.ico
-// @updateURL       https://openuserjs.org/meta/ANT0x1/HDRezka_Assistant.meta.js
-// @downloadURL     https://openuserjs.org/install/ANT0x1/HDRezka_Assistant.user.js
+// @supportURL      https://greasyfork.org/ru/scripts/370997-moonwalk-assistant
 // @run-at          document-end
 // @homepage        https://openuserjs.org/scripts/ANT0x1/
 // @grant           none
 // @copyright       2018, ANT0x1
-// @license         CC-BY-NC-SA-4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 // @license         GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
 // @namespace       ANT0x1
 // ==/UserScript==
@@ -24,121 +23,109 @@
 // @author          ANT0x1
 // ==/OpenUserJS==
 
-(function() {
+(function () {
     'use strict';
-    removeAds();
+    setTimeout(removeAds, 2000);
 })();
 
 var currentVideo = {
-	position: 0,
-	isFinished: false,
-	volume: 100
+    position: 0,
+    isFinished: false,
+    volume: 100
+};
+
+function removeAds() {
+    if (typeof video_balancer !== 'undefined') {
+        console.log('[Assistant] Removin Ads');
+
+        video_balancer.adv_loader.options.adb_vast.urls = [];
+        video_balancer.adv_loader.options.vast.urls = [];
+        video_balancer.adv_loader.options.reserve_vast.urls = [];
+    }
+
+    console.log("[Assistant] Ads disabled.");
+    playVideo();
 }
 
-function removeAds(){
-    setTimeout(function(){
-        if (typeof player === 'undefined') {
-            removeAds();
-        }
-        else {
-            if (typeof player.vast === 'undefined' || typeof player.vast.remove === 'undefined'){
-                removeAds();
-            }
-            else{
-                player.vast.remove();
-                console.log("[Assistant] Ads disabled.");
-                playVideo();
-            }
-        }
-    }, 2000);
-}
-
-function playVideo(){
-    setTimeout(function(){
-        if (typeof player === 'undefined' || typeof player.api === 'undefined'){
+function playVideo() {
+    setTimeout(function () {
+        if (typeof player === 'undefined' || typeof player.api === 'undefined') {
             playVideo();
             return;
         }
-		
-		player.api.play();
-		
-		console.log("[Assistant] Playing.");
-		
-		restoreFromStorage(); 
 
-		api.fullscreen();
-		console.log("[Assistant] Set to fullscreen.");
+        console.log("[Assistant] Playing.");
 
-		player.api.setVolume(currentVideo.volume);		
-		
-		autoSave();
-		        
+        setTimeout(function () {
+            setTimeout(restoreFromStorage, 2000);
+            player.api.setVolume(currentVideo.volume);
+            autoSave();
+        }, 2000);
     }, 2000);
 }
 
-function autoSave(){
-	var timeout = api.paused ? 20000 : 5000;
-		
-	setTimeout(function(){
-			savePosition();
-			
-			if (!api.paused)
-				saveToStorage();
-						
-			if (!currentVideo.isFinished)
-				autoSave();
-			
-		}, timeout);
+function autoSave() {
+    var timeout = api.paused ? 20000 : 5000;
+
+    setTimeout(function () {
+        savePosition();
+
+        if (!api.paused)
+            saveToStorage();
+
+        if (!currentVideo.isFinished)
+            autoSave();
+
+    }, timeout);
 }
 
-function savePosition(){
-	currentVideo.position = _mw_current_time;
-	currentVideo.volume = api.volumeLevel;
-	currentVideo.isFinished = api.finished;
+function savePosition() {
+    currentVideo.position = _mw_current_time;
+    currentVideo.volume = api.volumeLevel;
+    currentVideo.isFinished = api.finished;
 }
 
-function restorePosition(){
-	
-	if (currentVideo.position > 0){
-		player.api.seek(currentVideo.position);
-		console.log("[Assistant] Position restored to "+currentVideo.position+' sec.');
-	}
+function restorePosition() {
+
+    if (currentVideo.position > 0) {
+        player.api.seek(currentVideo.position);
+        console.log("[Assistant] Position restored to " + currentVideo.position + ' sec.');
+    }
 }
 
-function saveToStorage(){
-	var videos = JSON.parse(localStorage.getItem('videos'));
-	
-	if (!videos)
-		videos = {};
-	
-	videos[video_balancer.options.video_token] = currentVideo;
-	localStorage.setItem('videos', JSON.stringify(videos));
-	
-	console.log('[Assistant] Saved to storage');
+function saveToStorage() {
+    var videos = JSON.parse(localStorage.getItem('videos'));
+
+    if (!videos)
+        videos = {};
+
+    videos[video_balancer.options.video_token] = currentVideo;
+    localStorage.setItem('videos', JSON.stringify(videos));
+
+    //console.log('[Assistant] Saved to storage');
 }
 
-function restoreFromStorage(){
-	var videos = JSON.parse(localStorage.getItem('videos'));
-	
-	if (!videos)
-	{
-		videos = {};
-	}
-	
-	currentVideo = videos[video_balancer.options.video_token];
-	
-	if (!currentVideo){
-		currentVideo = {
-			position: 0,
-			isFinished: false,
-			volume: api.volumeLevel
-		}
-	}
-	
-	console.log('[Assistant] Restored from storage');
-	
-	if (!currentVideo.isFinished)
-		restorePosition();
-	else
-		currentVideo.isFinished = false;
+function restoreFromStorage() {
+    var videos = JSON.parse(localStorage.getItem('videos'));
+
+    if (!videos) {
+        videos = {};
+    }
+
+    currentVideo = videos[video_balancer.options.video_token];
+
+    if (!currentVideo) {
+        currentVideo = {
+            position: 0,
+            isFinished: false,
+            volume: api.volumeLevel
+        };
+    }
+
+    console.log('[Assistant] Restored from storage');
+
+    if (!currentVideo.isFinished)
+        restorePosition();
+    else
+        currentVideo.isFinished = false;
 }
