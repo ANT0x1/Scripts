@@ -7,14 +7,11 @@
 ! WritingRules: https://adblockplus.org/filters
 
 ! ----- Cosmetic Rules ----- !
-! VK Wall Ads
-vk.com## ._post_content:has(.wall_marked_as_ads)
 
 ! Foreign Policy Paywall Hide
 foreignpolicy.com###paywall_bg
 
 ! 17.03.2019 https://trakt.tv
-trakt.tv## a[href="/vip"]
 trakt.tv###huckster-desktop-wrapper
 trakt.tv###huckster-desktop-sidenav
 trakt.tv##.col-sm-6.col-md-4.col-xlg-3.huckster-grid-item.grid-item
@@ -23,6 +20,23 @@ trakt.tv##.get-tickets
 trakt.tv##.btn-watch-now
 trakt.tv##.btn-get-tickets
 trakt.tv##.streaming-links
+
+! 2020-11-29 https://tracker.gg
+tracker.gg##.size-inline-rectangle.ad-container
+tracker.gg##.bordered-ad
+
+! 2021-06-20 https://4pda.to
+4pda.to##article.ub9viUUTvbBL6uJ.cjt2kcz2ioB.post:nth-of-type(9)
+4pda.to##.cjt2kcz2ioB
+
+! 2021-06-24 https://www.glassdoor.com
+www.glassdoor.com##.e91w1dn0.css-13nldfg.pt.align-items-center.flex-column.d-flex
+www.glassdoor.com###ContentWallHardsell
+
+! 2021-06-30 https://trakt.tv
+trakt.tv##[href="/vip"]
+trakt.tv##.hu-ck-s-t-er-v-i-p-square
+trakt.tv##.col-sm-6.col-md-4.col-xlg-3.hu-ck-s-t-er-grid-item.grid-item
 
 
 ! ----- Network Rules ----- !
